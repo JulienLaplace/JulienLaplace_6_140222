@@ -1,5 +1,7 @@
+// Importation
 const multer = require('multer');
 
+// Fichiers valide
 const MIME_TYPES = {
     'image/jpg': 'jpg',
     'image/jpeg': 'jpg',
@@ -17,4 +19,5 @@ const storage = multer.diskStorage({
     }
 });
 
+// Exportation
 module.exports = multer({ storage }).single('image');
